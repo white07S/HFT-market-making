@@ -67,6 +67,11 @@ ax.set_title("Ask to mid spread")
 pp.legend()
 
 # Plot the bid spread for continuation region
-
+fig, ax = pp.subplots(figsize=[5, 4])
+for q in range(3, -4, -1):
+    ax.plot(model.l_m[q], label=f'q={q}')
+ax.set_title("Bid to mid spread")
+pp.legend()
+    
     
 
